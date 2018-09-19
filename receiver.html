@@ -47,31 +47,6 @@ limitations under the License.
     </style>
     <meta charset="utf-8"/>
     <title>Forex TV</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Mon', 20, 28, 38, 45],
-          ['Tue', 31, 38, 55, 66],
-          ['Wed', 50, 55, 77, 80],
-          ['Thu', 77, 77, 66, 50],
-          ['Fri', 68, 66, 22, 15]
-          // Treat first row as data as well.
-        ], true);
-
-        var options = {
-          legend:'none'
-        };
-
-        var chart = new google.visualization.CandlestickChart(document.getElementById('tradingview_2'));
-
-        chart.draw(data, options);
-      }
-    </script>
-
   </head>
   <body>
     <!-- TradingView Widget BEGIN -->
@@ -91,7 +66,7 @@ limitations under the License.
       <div id="tradingview_1" class="chart"></div>
       <div id="tradingview_2" class="chart"></div>
       <div id="tradingview_3" class="chart">
-          <iframe height="480" width="720" src="https://sslcharts.forexprostools.com/index.php?force_lang=1&pair_ID=1&timescale=3600&candles=100&style=candles"></iframe><br />
+          <iframe height="100%" width="100%" src="https://sslcharts.forexprostools.com/index.php?force_lang=1&pair_ID=1&timescale=3600&candles=100&style=candles"></iframe><br />
           <div style="width:500px">
             <a target="_blank" href="https://www.investing.com">
               <img src="https://wmt-invdn-com.akamaized.net/forexpros_en_logo.png" alt="Investing.com" title="Investing.com" style="float:left" border="0"/>
@@ -103,28 +78,8 @@ limitations under the License.
             </span>
           </div>
       </div>
-      <div id="tradingview_4" class="chart"></div>            
-      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>      
-      <script type="text/javascript">
-        new TradingView.widget(
-          {
-            "autosize": true,
-            "symbol": "FX:EURUSD",
-            "interval": "5",
-            "timezone": "Etc/UTC",
-            "theme": "Light",
-            "style": "1",
-            "locale": "br",
-            "toolbar_bg": "#f1f3f6",
-            "enable_publishing": false,
-            "hide_top_toolbar": true,
-            "save_image": false,
-            "container_id": "tradingview_1"
-          } 
-        );
-      </script>
+      <div id="tradingview_4" class="chart"></div>
     </div>
-    <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/symbols/FX-EURUSD/" rel="noopener" target="_blank"><span class="blue-text">EURUSD gráfico</span></a> por TradingView</div>
     <!-- TradingView Widget END -->
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
